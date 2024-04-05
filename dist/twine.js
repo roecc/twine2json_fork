@@ -60,6 +60,8 @@ function twineToJSON(format) {
     result.passages = passageElements.map((passageElement) => {
         return processPassageElement(passageElement, format);
     });
+
+    alert("injected once more.");
     return result;
 }
 
