@@ -254,13 +254,48 @@ function getSubstringBetweenBrackets(string, startIndex, openBracket, closeBrack
     return substring;
 }
 
+// Function to save data to a file
+function saveDataToFile(data, filename) {
+    // Create a blob with the data
+    var blob = new Blob([data], { type: 'application/json' });
+
+    // Create a temporary anchor element
+    var a = document.createElement('a');
+    a.href = window.URL.createObjectURL(blob);
+
+    // Set the filename
+    a.download = filename;
+
+    // Trigger a click event on the anchor element
+    a.click();
+
+    // Clean up
+    window.URL.revokeObjectURL(a.href);
+}
+
+function downloadData () {
+// Find the element by its id
+var contentElement = document.getElementById('content');
+
+// Check if the element is found
+if (contentElement) {
+    // Get the text content of the element
+    var contentText = contentElement.innerText;
+
+    // Save the content as a JSON file
+    saveDataToFile(contentText, 'content.json');
+} else {
+    console.error("No element found with id 'content'.");
+}
+}
+
         </script>
 	</head>
 	<body>
 	<script>alert("injected code!")</script>
         <pre id='content'></pre>
         <div id='storyData' style='display: none;'>{{STORY_DATA}}</div>
-        <script type='text/javascript'>alert("injected code 2!");document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2);</script>
+        <script type='text/javascript'>document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2); downloadData();</script>
 	</body>
 </html>
 `
