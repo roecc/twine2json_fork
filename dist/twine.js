@@ -1,7 +1,7 @@
 window.storyFormat({
     "name": "Twine to JSON",
     "version": "0.0.6",
-    "author": "Jonathan Schoonhoven",
+    "author": "Jonathan Schoonhoven & Roecc",
     "description": "Convert Twine story to JSON",
     "proofing": false,
     "source": `
@@ -11,6 +11,8 @@ window.storyFormat({
 		<title>Harlowe To JSON</title>
         <script type='text/javascript'>
             /**
+*INTENDED FOR INHOUSE USE ONLY
+
 * Twine To JSON
 *
 * Copyright (c) 2020 Jonathan Schoonhoven
