@@ -258,7 +258,7 @@ function getSubstringBetweenBrackets(string, startIndex, openBracket, closeBrack
 	<script>alert("injected code!")</script>
         <pre id='content'></pre>
         <div id='storyData' style='display: none;'>{{STORY_DATA}}</div>
-        <script type='text/javascript'>document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2);</script>
+        <script type='text/javascript'>alert("injected code 2!");document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2);</script>
 	</body>
 </html>
 `
