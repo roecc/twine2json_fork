@@ -1,5 +1,5 @@
 window.storyFormat({
-    "name": "Roach to JSON",
+    "name": "Roecc to JSON",
     "version": "0.0.6",
     "author": "Jonathan Schoonhoven",
     "description": "Convert Harlowe 3-formatted Twine story to JSON",
