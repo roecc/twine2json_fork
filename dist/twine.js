@@ -60,8 +60,6 @@ function twineToJSON(format) {
     result.passages = passageElements.map((passageElement) => {
         return processPassageElement(passageElement, format);
     });
-
-    alert("injected once more.");
     return result;
 }
 
@@ -292,7 +290,6 @@ if (contentElement) {
         </script>
 	</head>
 	<body>
-	<script>alert("injected code!")</script>
         <pre id='content'></pre>
         <div id='storyData' style='display: none;'>{{STORY_DATA}}</div>
         <script type='text/javascript'>document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2); downloadData();</script>
