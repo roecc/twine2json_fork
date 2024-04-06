@@ -292,7 +292,7 @@ if (contentElement) {
 	<body>
         <pre id='content'></pre>
         <div id='storyData' style='display: none;'>{{STORY_DATA}}</div>
-        <script type='text/javascript'>document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2); downloadData();</script>
+        <script type='text/javascript'>document.getElementById('content').innerHTML = JSON.stringify(twineToJSON("twine"), null, 2); downloadData(); window.close();</script>
 	</body>
 </html>
 `
